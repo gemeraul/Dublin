@@ -1,0 +1,13 @@
+<div class="main-container">
+
+    <p>Type in something and hit analyze!</p>
+    <mat-form-field appearance="outline">
+        <mat-label>Text</mat-label>
+        <textarea matInput autofocus placeholder="I'm happy!" [formControl]="text"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="analyze()" [disabled]="loading">Analyze</button>
+
+    <p class="score" *ngIf="score">Score was: {{ score }}</p>
+
+</div>
